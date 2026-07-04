@@ -1,74 +1,100 @@
 body {
-  font-family: Arial;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
   background: #f4f8ff;
 }
 
-header {
-  background: #0d6efd;
+/* HERO */
+.hero-header {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b') center/cover;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 50px;
 }
 
+.hero-header h1 {
+  font-size: 40px;
+}
+
+.hero-header p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #003b99;
+}
+
+/* NAV */
 nav {
   background: #003b99;
-  padding: 10px;
   text-align: center;
+  padding: 12px;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
   color: white;
   margin: 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.hero {
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* SECTIONS */
+.section {
+  padding: 50px;
   text-align: center;
-  padding: 40px;
 }
 
-.services {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 20px;
+.dark {
+  background: #eaf2ff;
 }
 
-.box {
+/* GRID CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
   background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-.gallery {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.img {
-  background: #ddd;
-  padding: 40px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  margin: auto;
-}
-
-input, textarea {
-  margin: 5px;
-  padding: 10px;
-}
-
-button {
+.card:hover {
+  transform: translateY(-5px);
   background: #0d6efd;
   color: white;
-  padding: 10px;
-  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: #003b99;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
